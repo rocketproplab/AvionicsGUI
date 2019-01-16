@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<!--  AUTOGEN BY SceneBuilder  -->
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900" prefWidth="1650" styleClass="root" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainController">
+   <children>
+      <Label layoutX="426.0" layoutY="6.0" styleClass="title-label-white" text="Rocket Propulsion Lab" />
+      <WebView fx:id="webView" layoutX="879.0" layoutY="124.0" prefHeight="719.0" prefWidth="756.0" />
+      <Button fx:id="connectButton" layoutX="41.0" layoutY="856.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" text="Connect" />
+      <ComboBox fx:id="portList" layoutX="211.0" layoutY="856.0" prefHeight="29.0" prefWidth="110.0" promptText="PORTS" />
+      <StackPane layoutX="13.0" layoutY="45.0" prefHeight="126.0" prefWidth="321.0">
+         <children>
+            <AnchorPane fx:id="setTimeMenu" prefHeight="139.0" prefWidth="334.0" styleClass="timer">
+               <children>
+                  <Button fx:id="stopTimer" layoutX="97.0" layoutY="113.0" mnemonicParsing="false" onAction="#unStart" prefHeight="29.0" prefWidth="143.0" text="Stop" />
+                  <GridPane prefHeight="109.0" prefWidth="319.0" styleClass="timer">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.2018299769016" minWidth="10.0" prefWidth="50.96329069783744" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.2018299769016" minWidth="10.0" prefWidth="84.550472218745" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.1559925745578" minWidth="10.0" prefWidth="91.59632293672928" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.99998671518287" minWidth="10.0" prefWidth="74.74309528557293" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="44.42201788755956" minHeight="10.0" prefHeight="13.596338108506828" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="88.95413293927609" minHeight="10.0" prefHeight="88.95413293927609" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Hours" wrappingWidth="103.24809265136719" GridPane.columnIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Minutes" wrappingWidth="106.93720234930515" GridPane.columnIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Seconds" textAlignment="CENTER" wrappingWidth="103.64582824707031" GridPane.columnIndex="3" />
+                        <Text fx:id="hoursTimer" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="timer-numbers" text="00:" textAlignment="CENTER" wrappingWidth="106.41566693782806" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fx:id="minutesTimer" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="timer-numbers" text="00:" textAlignment="CENTER" wrappingWidth="107.53209972381592" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Text fx:id="secondsTimer" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="timer-numbers" text="00" textAlignment="CENTER" wrappingWidth="108.41283893585205" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Text fx:id="T" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="timer-numbers" text="T-" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="viewTimeMenu" prefHeight="95.0" prefWidth="319.0" styleClass="timer">
+               <children>
+                  <GridPane centerShape="false" prefHeight="96.0" prefWidth="321.0" styleClass="grid">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="black-label" text="Hours" textAlignment="CENTER" wrappingWidth="143.4065456390381" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="black-label" text="Minutes" textAlignment="CENTER" wrappingWidth="148.7732696533203" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="black-label" text="Seconds" textAlignment="CENTER" wrappingWidth="145.92112731933594" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="hoursInput" prefWidth="150.0" promptText="Hours" GridPane.columnIndex="1" />
+                        <ComboBox fx:id="minutesInput" prefWidth="150.0" promptText="Minutes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="secondsInput" prefWidth="150.0" promptText="Seconds" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="startTimer" layoutX="99.0" layoutY="110.0" mnemonicParsing="false" onAction="#start" prefHeight="32.0" prefWidth="143.0" text="Start" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Label layoutX="77.0" layoutY="14.0" styleClass="medium-label-white" text="Mission Clock" />
+      <StackPane fx:id="altGaugePane" layoutX="13.0" layoutY="235.0" prefHeight="292.0" prefWidth="329.0">
+         <children>
+      	    <Gauge fx:id="altGauge" animated="true" barColor="#00d6d7" maxValue="200" minValue="0" needleColor="RED" prefHeight="285.0" prefWidth="313.0" skinType="MODERN" subTitleColor="WHITE" threshold="85" thresholdColor="RED" thresholdVisible="true" tickLabelColor="#979797" tickLabelOrientation="ORTHOGONAL" tickMarkColor="WHITE" title="Altitude" titleColor="WHITE" unit="Meters" unitColor="WHITE" value="90.00" valueColor="WHITE" />
+      	 </children>
+      </StackPane>
+      <StackPane fx:id="velGaugePane" layoutX="13.0" layoutY="542.0" prefHeight="292.0" prefWidth="329.0">
+         <children>
+            <Gauge fx:id="velGauge" animated="true" barColor="#00d6d7" maxValue="200" minValue="0" needleColor="RED" prefHeight="240.0" prefWidth="296.0" skinType="MODERN" subTitleColor="WHITE" threshold="100" thresholdColor="RED" thresholdVisible="true" tickLabelColor="#979797" tickLabelOrientation="ORTHOGONAL" tickMarkColor="WHITE" title="Velocity" titleColor="WHITE" unit="Km / Hr" unitColor="WHITE" value="114.2" valueColor="WHITE" />
+         </children>
+      </StackPane>
+      <Button fx:id="toEngineMonitor" layoutX="1445.0" layoutY="856.0" mnemonicParsing="false" onAction="#changeScene" text="To Engine Monitor" />
+      <ImageView fitHeight="150.0" fitWidth="199.0" layoutX="1436.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../small_logo.JPG" />
+         </image>
+      </ImageView>
+      <Pane fx:id="sub" layoutX="397.0" layoutY="126.0" prefHeight="719.0" prefWidth="456.0">
+         <children>
+            <SubScene fx:id="subScene" height="718.0" width="456.0">
+              <root>
+                <Region />
+              </root>
+            </SubScene>
+         </children>
+      </Pane>
+      <Label fx:id="portData" layoutX="340.0" layoutY="861.0" text="Label" />
+   </children>
+</AnchorPane>

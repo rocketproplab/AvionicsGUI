@@ -1,0 +1,150 @@
+/*STYLESHEET */
+.root{
+   -fx-background-color: #383838;
+   -fx-font-color: #FFFFFF;
+   -fx-background-radius: 0;
+}
+
+.black-text-wrap{
+   -fx-background-color: #383838;
+   -fx-font-color: #FFFFFF;
+   -fx-background-radius: 10;
+}
+
+.white-text-wrap{
+   -fx-background-color: #fff;
+   -fx-font-color: #000;
+   -fx-background-radius: 10;
+}
+
+.label{
+    -fx-font-family: "BankGothic Md BT";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14pt;
+}
+
+.black-label{
+    -fx-font-family: "BankGothic Md BT";
+    -fx-text-fill: #000000;
+    -fx-font-size: 14pt;
+}
+
+.tank-title-label{
+    -fx-font-family: "BankGothic Md BT";
+    -fx-text-fill: #000000;
+    -fx-font-size: 18pt;
+}
+
+.WHITE-tank-title-label{
+    -fx-font-family: "BankGothic Md BT";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18pt;
+}
+
+.title-label-white{
+    -fx-font-family: "BankGothic Md BT";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 36pt;
+}
+
+.medium-label-white{
+    -fx-font-family: "BankGothic Md BT";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20pt;
+}
+
+.timer{
+	-fx-background-color: #999999;
+	-fx-padding: 10;
+}
+
+.timer-numbers{
+    -fx-font-family: "BankGothic Md BT";
+    -fx-text-fill: #000;
+    -fx-font-size: 36pt;
+}
+
+.grid {
+    -fx-background-color: #999999;
+}
+
+.button{
+	-fx-background-color: #FFF;
+	-fx-font-family: "BankGothic Md BT";
+    -fx-text-fill: #000000;
+    -fx-font-size: 12pt;
+}
+
+.line{
+	-fx-background-color: #FFF;
+	-fx-shape: "M 400 300 L 150 300 L 150 400 ";
+}
+
+.tank-shape{
+	-fx-background-color: #FFF;
+	-fx-background-radius: 14;
+	-fx-border-radius: 10;
+	-fx-border-width: 6;
+	-fx-border-color: "black";
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.triangle{
+	-fx-shape: "M0 0 L100 75 L200 0 Z";
+	-fx-background-color: #FFF;
+	-fx-border-width: 4;
+	-fx-border-color: "black";
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.small-triangle{
+	-fx-shape: "M0 0 L100 75 L200 0 Z";
+	-fx-background-color: #000;
+	-fx-border-width: 2;
+	-fx-border-color: "black";
+}
+
+.lox-prop{
+	-fx-background-color: #FFF;
+	-fx-background-radius: 0;
+	-fx-border-radius: 0;
+	-fx-border-width: 4;
+	-fx-border-color: "black";
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.rectangle{
+	-fx-background-radius: 0;
+	-fx-border-radius: 0;
+	-fx-border-width: 5;
+	-fx-border-color: "black";
+}
+
+.white-rectangle{
+	-fx-background-radius: 0;
+	-fx-border-radius: 0;
+	-fx-border-width: 5;
+	-fx-border-color: "white";
+}
+
+.flow-arrow{
+	-fx-background-color: #FFF;
+	-fx-background-radius: 0;
+	-fx-border-radius: 0;
+	-fx-border-width: 3;
+	-fx-border-color: "black";
+}
+
+.chamber-shape{
+	-fx-shape: "M 550 300 L 550 150 L 350 150 L 350 300 L 400 350 L 350 450 L 550 450 L 500 350 L 550 300";
+	-fx-background-color: #FFF;
+	-fx-background-radius: 0;
+	-fx-border-radius: 0;
+	-fx-border-width: 4;
+	-fx-border-color: "black";
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+	 }
+
+
+
+

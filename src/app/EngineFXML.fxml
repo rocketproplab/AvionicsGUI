@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900" prefWidth="1650" styleClass="root" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.EngineController">
+   <children>
+      <Button fx:id="backToMain" layoutX="1495.0" layoutY="856.0" mnemonicParsing="false" onAction="#changeScene" text="Back To Main" />
+      <AnchorPane fx:id="LOX_TANK" layoutX="763.0" layoutY="328.0" prefHeight="329.0" prefWidth="202.0" styleClass="tank-shape">
+         <children>
+            <Label layoutX="73.0" layoutY="14.0" styleClass="tank-title-label" text="LOX" />
+            <Label layoutX="14.0" layoutY="92.0" styleClass="black-label" text="PT-101: " />
+            <Label layoutX="14.0" layoutY="165.0" styleClass="black-label" text="TC-101:" />
+            <AnchorPane layoutX="100.0" layoutY="160.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="thermo_coupler101" alignment="CENTER" prefHeight="39.0" prefWidth="71.0" text="0.00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="100.0" layoutY="87.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="pressure_transducer101" alignment="CENTER" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <Label layoutX="615.0" styleClass="title-label-white" text="Engine Monitor" />
+      <AnchorPane fx:id="HP_TANK" layoutX="457.0" layoutY="464.0" prefHeight="192.0" prefWidth="203.0" styleClass="tank-shape">
+         <children>
+            <Label layoutX="85.0" layoutY="14.0" styleClass="tank-title-label" text="HP" />
+            <Label layoutX="14.0" layoutY="69.0" styleClass="black-label" text="PT-301:" />
+            <AnchorPane layoutX="101.0" layoutY="64.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="pressure_transducer301" alignment="CENTER" layoutX="22.0" layoutY="3.0" prefHeight="29.064221200653257" prefWidth="72.22018601374445" text="0.00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="13.0" layoutY="128.0" styleClass="black-label" text="TC-301:" />
+            <AnchorPane layoutX="101.0" layoutY="123.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="thermo_coupler301" alignment="CENTER" layoutX="22.0" layoutY="3.0" prefHeight="29.064221200653257" prefWidth="72.22018601374445" text="0.00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="FUEL_TANK" layoutX="152.0" layoutY="328.0" prefHeight="329.0" prefWidth="202.0" styleClass="tank-shape">
+         <children>
+            <Label layoutX="65.0" layoutY="14.0" styleClass="tank-title-label" text="FUEL" />
+            <Label layoutX="15.0" layoutY="76.0" styleClass="black-label" text="PT-201:" />
+            <AnchorPane layoutX="100.0" layoutY="71.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="pressure_transducer201" alignment="CENTER" layoutX="13.0" layoutY="7.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="15.0" layoutY="165.0" styleClass="black-label" text="TC-201:" />
+            <AnchorPane layoutX="100.0" layoutY="160.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="thermo_coupler201" alignment="CENTER" layoutX="13.0" layoutY="7.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1226.0" layoutY="325.0" prefHeight="60.0" prefWidth="201.0" styleClass="lox-prop">
+         <children>
+            <Label layoutX="25.0" layoutY="20.0" styleClass="black-label" text="PT7:" />
+            <AnchorPane layoutX="79.0" layoutY="15.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="pressure_transducer7" alignment="CENTER" layoutY="-1.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1191.0" layoutY="233.0" prefHeight="92.0" prefWidth="270.0" styleClass="triangle">
+         <children>
+            <AnchorPane layoutX="99.0" layoutY="31.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="LC3" alignment="CENTER" layoutX="13.0" layoutY="7.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1240.0" layoutY="383.0" prefHeight="123.0" prefWidth="174.0" styleClass="lox-prop">
+         <children>
+            <Label layoutX="13.0" layoutY="24.0" styleClass="black-label" text="PT6:" />
+            <Label layoutX="12.0" layoutY="77.0" styleClass="black-label" text="TC6:" />
+            <AnchorPane layoutX="67.0" layoutY="19.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="pressure_transducer6" alignment="CENTER" layoutY="-1.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="67.0" layoutY="72.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="thermo_coupler6" alignment="CENTER" layoutY="-1.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="1256.0" layoutY="204.0" styleClass="WHITE-tank-title-label" text="INJECTOR" />
+      <Label layoutX="1136.0" layoutY="341.0" styleClass="WHITE-tank-title-label" text="LOX" />
+      <Label layoutX="1096.0" layoutY="431.0" styleClass="WHITE-tank-title-label" text="METHANE" />
+      <Label layoutX="1094.0" layoutY="581.0" styleClass="WHITE-tank-title-label" text="CHAMBER" />
+      <AnchorPane layoutX="1241.0" layoutY="503.0" prefHeight="247.0" prefWidth="174.0" styleClass="chamber-shape">
+         <children>
+            <AnchorPane layoutX="90.0" layoutY="13.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="pressure_transducer202" alignment="CENTER" layoutY="-1.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="5.0" layoutY="17.0" styleClass="black-label" text="PT-202:" />
+            <Label layoutX="5.0" layoutY="56.0" styleClass="black-label" text="PT-203:" />
+            <AnchorPane layoutX="90.0" layoutY="51.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="pressure_transducer203" alignment="CENTER" layoutY="-1.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="5.0" layoutY="94.0" styleClass="black-label" text="TC-401:" />
+            <AnchorPane layoutX="90.0" layoutY="89.0" prefHeight="29.0" prefWidth="71.0" styleClass="black-text-wrap">
+               <children>
+                  <Label fx:id="thermo_coupler401" alignment="CENTER" layoutY="-1.0" prefHeight="29.064221200653257" prefWidth="71.33945203796709" text="0.00" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <Line endX="-113.99081420898438" endY="-15.403656005859375" layoutX="367.0" layoutY="279.0" startX="-113.99081420898438" startY="46.0" strokeWidth="5.0" />
+      <Line endX="433.25689697265625" endY="9.096343994140625" layoutX="431.0" layoutY="252.0" startX="-177.99081420898438" startY="9.096343994140625" strokeWidth="5.0" />
+      <Line endX="31.28436279296875" endY="120.0" layoutX="833.0" layoutY="205.0" startX="31.28436279296875" startY="58.596343994140625" strokeWidth="5.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="844.0" layoutY="282.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="40.0" />
+      <Line endX="-79.39450073242188" endY="3.0517578125E-5" layoutX="954.0" layoutY="294.0" rotate="90.0" startX="-100.0" strokeWidth="2.0" />
+      <AnchorPane layoutX="857.0" layoutY="295.0" prefHeight="13.0" prefWidth="14.0" styleClass="small-triangle" />
+      <Line endX="222.82568359375" endY="-67.92657470703125" layoutX="1036.0" layoutY="712.0" startX="42.2752685546875" startY="-67.92657470703125" strokeWidth="5.0" />
+      <Line endX="0.28436279296875" endY="-19.99993896484375" layoutX="864.0" layoutY="716.0" startX="0.28436279296875" startY="-58.60546875" strokeWidth="5.0" />
+      <AnchorPane layoutX="849.0" layoutY="759.0" prefHeight="30.0" prefWidth="30.0" styleClass="lox-prop">
+         <children>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="5.0" prefHeight="33.46789107954012" prefWidth="30.825689152208" styleClass="black-label" text="S" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+      <Line endX="40.13763427734375" endY="-89.0" layoutX="824.0" layoutY="828.0" startX="40.41278076171875" startY="-69.0" strokeWidth="5.0" />
+      <Line endX="13.60552978515625" endY="6.103515625E-5" layoutX="981.0" layoutY="774.0" startX="-100.0" strokeWidth="5.0" />
+      <Line endX="95.14105224609375" endY="-57.99993896484375" layoutX="903.0" layoutY="832.0" startX="95.14105224609375" startY="-541.1008911132812" strokeWidth="5.0" />
+      <Line endX="172.5137939453125" layoutX="1096.0" layoutY="288.0" startX="-97.85894775390625" startY="0.39910888671875" strokeWidth="5.0" />
+      <AnchorPane layoutX="1116.0" layoutY="276.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="40.0" rotate="180.0" styleClass="flow-arrow">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="6.0" prefHeight="13.0" prefWidth="14.0" rotate="90.0" styleClass="small-triangle" />
+            <Line endX="-76.93572998046875" endY="3.0517578125E-5" layoutX="108.0" layoutY="13.0" startX="-100.0" strokeWidth="2.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="978.0" layoutY="493.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="40.0" rotate="90.0" styleClass="flow-arrow">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="6.0" prefHeight="13.0" prefWidth="14.0" rotate="90.0" styleClass="small-triangle" />
+            <Line endX="-76.93572998046875" endY="3.0517578125E-5" layoutX="108.0" layoutY="13.0" startX="-100.0" strokeWidth="2.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="238.0" layoutY="735.0" prefHeight="30.0" prefWidth="30.0" styleClass="lox-prop">
+         <children>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="5.0" prefHeight="33.46789107954012" prefWidth="30.825689152208" styleClass="black-label" text="S" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Line endX="-117.58714294433594" endY="5.0" layoutX="371.0" layoutY="730.0" startX="-117.71560668945312" startY="-72.60546875" strokeWidth="5.0" />
+      <Line endX="-57.2247314453125" endY="91.12847900390625" layoutX="1133.0" layoutY="715.0" startX="-57.2247314453125" startY="-70.92657470703125" strokeWidth="5.0" />
+      <Line endX="334.7752685546875" endY="-8.3714599609375" layoutX="741.0" layoutY="817.0" startX="-487.09173583984375" startY="-8.3714599609375" strokeWidth="5.0" />
+      <Line endX="69.41287231445312" endY="-67.17431640625" layoutX="184.0" layoutY="833.0" startX="69.41287231445312" startY="-25.11004638671875" strokeWidth="5.0" />
+      <AnchorPane layoutX="233.0" layoutY="282.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="40.0" rotate="270.0" styleClass="flow-arrow">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="6.0" prefHeight="13.0" prefWidth="14.0" rotate="90.0" styleClass="small-triangle" />
+            <Line endX="-76.93572998046875" endY="3.0517578125E-5" layoutX="108.0" layoutY="13.0" startX="-100.0" strokeWidth="2.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="543.0" layoutY="367.0" prefHeight="30.0" prefWidth="30.0" styleClass="lox-prop">
+         <children>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="5.0" prefHeight="33.46789107954012" prefWidth="30.825689152208" styleClass="black-label" text="R" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Line endX="28.7247314453125" endY="33.0" layoutX="530.0" layoutY="431.0" startX="28.412841796875" startY="-33.174285888671875" strokeWidth="5.0" />
+      <Line endX="3.412841796875" endY="42.0" layoutX="555.0" layoutY="325.0" startX="3.63299560546875" startY="-63.903656005859375" strokeWidth="5.0" />
+      <AnchorPane layoutX="615.0" layoutY="796.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="40.0" rotate="180.0" styleClass="flow-arrow">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="6.0" prefHeight="13.0" prefWidth="14.0" rotate="90.0" styleClass="small-triangle" />
+            <Line endX="-76.93572998046875" endY="3.0517578125E-5" layoutX="108.0" layoutY="13.0" startX="-100.0" strokeWidth="2.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1116.0" layoutY="632.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="40.0" rotate="180.0" styleClass="flow-arrow">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="6.0" prefHeight="13.0" prefWidth="14.0" rotate="90.0" styleClass="small-triangle" />
+            <Line endX="-76.93572998046875" endY="3.0517578125E-5" layoutX="108.0" layoutY="13.0" startX="-100.0" strokeWidth="2.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="772.0" layoutY="700.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="184.0" styleClass="rectangle">
+         <children>
+            <Label layoutX="11.0" layoutY="9.0" text="TC-102:" />
+            <AnchorPane layoutX="104.0" layoutY="5.0" prefHeight="29.0" prefWidth="71.0" styleClass="white-text-wrap">
+               <children>
+                  <Label fx:id="thermo_coupler102" alignment="CENTER" prefHeight="39.0" prefWidth="71.0" styleClass="black-label" text="0.00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" styleClass="white-rectangle">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="40.0" styleClass="flow-arrow">
+               <children>
+                  <AnchorPane layoutX="4.0" layoutY="6.0" prefHeight="13.0" prefWidth="14.0" rotate="90.0" styleClass="small-triangle" />
+                  <Line endX="-76.93572998046875" endY="3.0517578125E-5" layoutX="108.0" layoutY="13.0" startX="-100.0" strokeWidth="2.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="74.0" layoutY="16.0" text="Flow Path" />
+            <AnchorPane layoutX="19.0" layoutY="58.0" prefHeight="30.0" prefWidth="30.0" styleClass="lox-prop">
+               <children>
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="5.0" prefHeight="33.46789107954012" prefWidth="30.825689152208" styleClass="black-label" text="S" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="19.0" layoutY="102.0" prefHeight="30.0" prefWidth="30.0" styleClass="lox-prop">
+               <children>
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="5.0" prefHeight="33.46789107954012" prefWidth="30.825689152208" styleClass="black-label" text="R" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="73.0" layoutY="63.0" text="Selenoid" />
+            <Label layoutX="73.0" layoutY="107.0" text="Regulator" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="200.0" styleClass="white-rectangle">
+         <children>
+            <Label alignment="CENTER" layoutX="47.0" layoutY="9.0" prefHeight="50.20183661931017" prefWidth="201.68808045301807" styleClass="medium-label-white" text="Legend" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="199.0" layoutX="1436.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../small_logo.JPG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
